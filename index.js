@@ -1,54 +1,25 @@
-// FLATBURGER RESTAURANT
-
 // TASK 1: GLOBAL SCOPE
 
 const burgers = ["Hamburger", "Cheeseburger"];
 
-let featuredBurger = "Cheeseburger";
-
-let featuredDrink = "Milkshake";
+let featuredDrink = "Strawberry Milkshake";
 
 // TASK 2: FUNCTION SCOPE
 
-function displayRestaurant() {
-    var restaurantName = "Flatburger Restaurant";
-
-    console.log("Welcome to " + restaurantName);
-    console.log("Available burgers:", burgers);
-    console.log("Featured drink:", featuredDrink);
-}
-
-// TASK 3: UPDATE FEATURED BURGER
-
-function updateFeaturedBurger() {
-    featuredBurger = "Double Cheeseburger";
-
-    console.log("Featured burger:", featuredBurger);
-}
-
-// TASK 4: BLOCK SCOPE
-
 function addBurger() {
-    if (true) {
-        const newBurger = "Bacon Cheeseburger";
-
-        burgers.push(newBurger);
-
-        console.log(newBurger + " added successfully!");
-    }
-
-    console.log("Updated burger menu:", burgers);
+    const newBurger = "Flatburger";
+    burgers.push(newBurger);
 }
 
-// RUN FUNCTIONS
+// TASK 3: BLOCK SCOPE
 
-displayRestaurant();
-updateFeaturedBurger();
-addBurger();
+if (true) {
+    const anotherNewBurger = "Maple Bacon Burger";
+    burgers.push(anotherNewBurger);
+}
 
-// FINAL RESULTS
+// TASK 4: CHANGE FEATURED DRINK
 
-console.log("FINAL MENU");
-console.log("Burgers:", burgers);
-console.log("Featured burger:", featuredBurger);
-console.log("Featured drink:", featuredDrink);
+function changeFeaturedDrink() {
+    featuredDrink = "The JavaShake";
+}
